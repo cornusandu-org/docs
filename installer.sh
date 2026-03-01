@@ -3,9 +3,9 @@
 set -e
 
 path=$(pwd)
+tempdir=$(mktemp -d)
 
-mkdir -p /tmp/docs
-cd /tmp/docs
+cd $(tempdir)
 mkdir -p src
 cd src
 wget -O main.cpp https://raw.githubusercontent.com/cornusandu-org/docs/refs/heads/main/src/main.cpp
